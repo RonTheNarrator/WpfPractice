@@ -22,13 +22,16 @@ namespace HelloWPFApp
     public partial class StopwatchWindow : Window
     {
         Stopwatch stopwatch = new();
-        DispatcherTimer timer = new();
 
         public StopwatchWindow()
         {
             InitializeComponent();
-            timer.Interval = TimeSpan.FromMilliseconds(10);
-            timer.Tick += timer_tick;
+            CompositionTarget.Rendering += OnRender;
+        }
+
+        private void OnRender(object? sender, EventArgs e)
+        {
+            UpdateTimeDisplay(stopwatch.Elapsed);
         }
 
         private void timer_tick(object? sender, EventArgs e)
@@ -48,14 +51,12 @@ namespace HelloWPFApp
             if (stopwatch.IsRunning)
             {
                 stopwatch.Stop();
-                timer.Stop();
                 UpdateTimeDisplay(stopwatch.Elapsed);
                 button.Content = "Start";
             }
             else
             {
                 stopwatch.Start();
-                timer.Start();
                 button.Content = "Stop";
             }
         }
