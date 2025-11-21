@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="HelloWPF" Height="450" Width="800">
     <Window.Resources>
-        <sys:String x:Key="painText">Pain</sys:String>
+        <sys:String x:Key="painText">Text</sys:String>
         <Style TargetType="Button">
             <Setter Property="BorderBrush" Value="Fuchsia"/>
         </Style>
@@ -16,8 +16,8 @@
     <Grid>
         <StackPanel VerticalAlignment="Top" Margin="0,15,0,0">
             <TextBlock Name="Pain" HorizontalAlignment="Center" FontSize="96" Text="{StaticResource painText}"/>
-            <TextBlock HorizontalAlignment="Center" Foreground="Red">test<LineBreak/>lol xd</TextBlock>
-            <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" TextWrapping="Wrap">Aaaaaaaa <Bold>aaaaaaaaaaa</Bold>aaaaaaaaaaaaaaaa <Italic>aaaaaaaaaa</Italic> sssssssss <Underline>sssssssssss</Underline> cccc sssssssss</TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="Red">Multi<LineBreak/>Line Text</TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" TextWrapping="Wrap">Styles <Bold>aaaaaaaaaaa</Bold>aaaaaaaaaaaaaaaa <Italic>aaaaaaaaaa</Italic> sssssssss <Underline>sssssssssss</Underline> cccc sssssssss</TextBlock>
             <TextBox Width="300" AcceptsReturn="True" TextWrapping="Wrap" SelectionChanged="TextBox_SelectionChanged"/>
             <TextBox Width="300" IsReadOnly="True" AcceptsReturn="True" Name="returnBox"/>
             <Button Width="80" Click="Button_Click">Ok</Button>

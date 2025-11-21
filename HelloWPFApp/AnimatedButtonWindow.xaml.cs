@@ -17,9 +17,9 @@ namespace HelloWPFApp
     /// <summary>
     /// Interaction logic for AnimatedButton.xaml
     /// </summary>
-    public partial class AnimatedButton : Window
+    public partial class AnimatedButtonWindow : Window
     {
-        public AnimatedButton()
+        public AnimatedButtonWindow()
         {
             InitializeComponent();
         }
