@@ -19,7 +19,7 @@ namespace HelloWPFApp
 
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
-            MessageBox.Show($"Unhandled exception: {e.ToString}");
+            //MessageBox.Show($"Unhandled exception: {e.ToString}");
             //e.Handled = true;
         }
     }

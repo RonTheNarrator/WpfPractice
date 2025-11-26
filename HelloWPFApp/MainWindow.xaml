@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloWPFApp"
         mc:Ignorable="d"
-        Title="Collection of random exercises" Height="450" Width="800">
+        Title="Collection of random exercises" Height="450" Width="400">
     <Grid>
         <StackPanel HorizontalAlignment="Center">
             <Separator Height="30"/>
             <TextBlock FontSize="48">Pick your Poison</TextBlock>
             <ItemsControl ItemsSource="{Binding buttonList}"
-                          d:ItemsSource="{d:SampleData ItemCount=4}">
+                          d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button Click="ButtonWindowSelect">
@@ -25,7 +25,7 @@
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Width" Value="200"/>
-            <Setter Property="Height" Value="50"/>
+            <Setter Property="Height" Value="40"/>
             <Setter Property="Margin" Value="10"/>
         </Style>
     </Window.Resources>

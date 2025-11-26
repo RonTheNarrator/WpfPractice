@@ -12,7 +12,7 @@ namespace HelloWPFApp
         {
             InitializeComponent();
             DataContext = this;
-            buttonList = WindowLinkContainer.WindowContanerList([typeof(GreetingsWindow), typeof(HelloWPF), typeof(AnimatedButtonWindow), typeof(StopwatchWindow)]);
+            buttonList = WindowLinkContainer.WindowContanerList([typeof(GreetingsWindow), typeof(HelloWPF), typeof(AnimatedButtonWindow), typeof(StopwatchWindow), typeof(AnimatedDVD)]);
         }
 
         public List<WindowLinkContainer> buttonList { get; set; }
